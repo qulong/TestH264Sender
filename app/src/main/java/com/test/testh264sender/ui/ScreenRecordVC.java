@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import com.laifeng.sopcastsdk.configuration.AudioConfiguration;
 import com.laifeng.sopcastsdk.configuration.VideoConfiguration;
+import com.laifeng.sopcastsdk.screen.ScreenRecordActivity;
 import com.laifeng.sopcastsdk.stream.packer.tcp.TcpPacker;
 import com.laifeng.sopcastsdk.stream.sender.OnSenderListener;
 import com.laifeng.sopcastsdk.stream.sender.tcp.TcpSender;
@@ -19,12 +20,12 @@ import com.test.testh264sender.R;
 import java.io.File;
 import java.io.IOException;
 
-public class LaifengScreenRecordActivity extends com.laifeng.sopcastsdk.screen.ScreenRecordActivity implements OnSenderListener {
+public class ScreenRecordVC extends ScreenRecordActivity implements OnSenderListener {
     private AppCompatButton btn_start;
     private String ip;
     private VideoConfiguration mVideoConfiguration;
     private TcpSender tcpSender;
-    private final static String TAG = "LaifengScreenRecord";
+    final static String TAG = "ScreenRecordVC";
     private boolean isRecord = false;
     private EditText et_main;
 

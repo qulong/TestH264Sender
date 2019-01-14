@@ -5,13 +5,6 @@ import java.net.DatagramSocket;
 import java.net.InetSocketAddress;
 import java.util.Arrays;
 
-/**
- * Created by xu.wang
- * Date on  2018/8/23 13:24:28.
- *
- * @Desc
- */
-
 public class UdpServer extends Thread {
     private int udpPort = 11111;
     private DatagramSocket datagramSocket;

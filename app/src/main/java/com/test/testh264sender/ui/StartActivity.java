@@ -11,15 +11,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.test.testh264sender.R;
-import com.test.testh264sender.ui.LaifengLivingActivity;
-import com.test.testh264sender.ui.LaifengScreenRecordActivity;
-
-/**
- * Created by xu.wang
- * Date on  2018/5/28 09:41:00.
- *
- * @Desc
- */
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
@@ -61,7 +52,7 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(livingIntent);
                 break;
             case R.id.btn_test_record:
-                Intent intent = new Intent(this, LaifengScreenRecordActivity.class);
+                Intent intent = new Intent(this, ScreenRecordVC.class);
                 startActivity(intent);
                 break;
         }

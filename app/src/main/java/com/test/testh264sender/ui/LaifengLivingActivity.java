@@ -18,12 +18,6 @@ import com.laifeng.sopcastsdk.ui.CameraLivingView;
 import com.test.testh264sender.Constant;
 import com.test.testh264sender.R;
 
-/**
- * Created by xu.wang
- * Date on  2018/5/28 10:36:29.
- *
- * @Desc
- */
 
 public class LaifengLivingActivity extends AppCompatActivity {
     private static final String TAG = "LaifengLivingActivity";
