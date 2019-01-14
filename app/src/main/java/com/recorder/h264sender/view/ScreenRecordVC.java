@@ -1,6 +1,5 @@
-package com.test.testh264sender.ui;
+package com.recorder.h264sender.view;
 
-import android.os.Environment;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.text.TextUtils;
@@ -14,11 +13,9 @@ import com.laifeng.sopcastsdk.screen.ScreenRecordActivity;
 import com.laifeng.sopcastsdk.stream.packer.tcp.TcpPacker;
 import com.laifeng.sopcastsdk.stream.sender.OnSenderListener;
 import com.laifeng.sopcastsdk.stream.sender.tcp.TcpSender;
-import com.test.testh264sender.Constant;
-import com.test.testh264sender.R;
+import com.recorder.h264sender.Constant;
+import com.recorder.h264sender.R;
 
-import java.io.File;
-import java.io.IOException;
 
 public class ScreenRecordVC extends ScreenRecordActivity implements OnSenderListener {
     private AppCompatButton btn_start;
@@ -48,33 +45,15 @@ public class ScreenRecordVC extends ScreenRecordActivity implements OnSenderList
                         ip = et_main.getText().toString();
                     }
                     requestRecording();
-                    Log.e(TAG, "Ip = " + ip + "start record");
-                    btn_start.setText("start record");
+                    Log.e(TAG, "Ip = " + ip);
+                    btn_start.setText("开始");
                 } else {
                     stopRecording();
-                    Log.e("Test", "stop record");
-                    btn_start.setText("stop record");
+                    Log.e("Test", "停止");
+                    btn_start.setText("停止");
                 }
             }
         });
-    }
-
-    private void initialData() {
-        String path = Environment.getExternalStorageDirectory() + "/test";
-        File file = new File(path);
-        if (!file.exists()) {
-            file.mkdirs();
-        }
-        File file1 = new File(file, "test.h264");
-        if (file1.exists()) {
-            file1.delete();
-        }
-        try {
-            file1.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e("Test", "" + e.toString());
-        }
     }
 
     @Override
@@ -107,22 +86,18 @@ public class ScreenRecordVC extends ScreenRecordActivity implements OnSenderList
 
     @Override
     public void onConnecting() {
-        Log.e(TAG, "onConnecting ...");
     }
 
     @Override
     public void onConnected() {
-        Log.e(TAG, "onConnected");
     }
 
     @Override
     public void onDisConnected() {
-        Log.e(TAG, "onDisConnected");
     }
 
     @Override
     public void onPublishFail() {
-        Log.e(TAG, "onPublishFail");
     }
 
     @Override

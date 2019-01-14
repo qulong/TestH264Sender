@@ -1,4 +1,4 @@
-package com.test.testh264sender;
+package com.recorder.h264sender;
 
 public class Constant {
     public static String ip = "192.168.8.157";

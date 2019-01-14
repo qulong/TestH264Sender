@@ -1,4 +1,4 @@
-package com.test.testh264sender.udp;
+package com.recorder.h264sender.msg;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
